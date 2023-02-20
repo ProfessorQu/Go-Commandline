@@ -99,7 +99,7 @@ func main() {
 		input = strings.TrimSpace(input)
 		command := strings.Split(input, " ")
 
-		if len(command) < 1 {
+		if len(command) == 0 {
 			continue
 		}
 
@@ -146,7 +146,7 @@ func main() {
 				x, y, success := parse_floats(command)
 
 				if y == 0 {
-					fmt.Println("'y' cannot be 0")
+					fmt.Println("Can not divide by 0")
 				} else if success {
 					fmt.Printf("%g / %g = %g\n", x, y, x/y)
 				}
